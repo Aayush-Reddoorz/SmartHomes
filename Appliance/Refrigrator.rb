@@ -1,4 +1,4 @@
-class Refrigrator
+class Refrigrator < Appliances
     @attr_reader :cool_intensity,:freezing
     def initialize
         super("Refrigrator")
