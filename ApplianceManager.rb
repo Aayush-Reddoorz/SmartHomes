@@ -17,9 +17,13 @@ class ApplianceManager
             when "Fan" 
                 current_appliance = Fan.new(app_hash["@status"],app_hash["@speed"])
             when "Tv"
-                
-            else
-
+                current_appliance= Tv.new(app_hash["@status"],app_hash["@volume"],app_hash["@channel"])
+            when "Tubelight"
+                current_appliance=Tubelight.new(app_hash["@status"],app_hash["@brightness"])
+            when "Refrigrator"
+                 current_appliance= Refrigrator.new(app_hash["@status"],app_hash["@cool_intensity"],app_hash["@freezing"])
+            when "AirConditioner"
+                 current_appliance= AirConditioner.new(app_hash["@status"],app_hash["@temprature"],app_hash["@timer"], app_hash["@speed"], app_hash["@cool_mode"],app_hash["@swing"])                
             end
             @products << current_appliance
         end
