@@ -55,6 +55,7 @@ require_relative 'user'
 
 # Main loop
 loop do
+  clear_screen
   print_header
   puts "Choose Role:"
   puts "1. Admin (a)"
