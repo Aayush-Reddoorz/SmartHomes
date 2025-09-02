@@ -3,9 +3,9 @@ require_relative 'Appliances'
 class Fan<Appliances
      
     attr_reader :speed
-    def initialize(speed)
+    def initialize
     super('Fan')
-      @speed=speed
+      @speed=5
     end
 
     def change_speed(speed)
