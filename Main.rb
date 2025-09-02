@@ -47,7 +47,7 @@ end
 require_relative 'admin'
 require_relative 'user'
 
-puts ApplianceManagerInstance.products
+# puts ApplianceManagerInstance.products
 
 # Main loop
 loop do
