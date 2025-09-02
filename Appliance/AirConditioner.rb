@@ -31,12 +31,12 @@ class AirConditioner < Appliances
         return {success: true, message: "Speed set to #{speed}"}
     end
 
-    def cool_mode_switch
+    def change_cool_mode(para = true)
         @cool_mode = !@cool_mode
         return {success: true, message: "Cool mode is #{@cool_mode ? 'On' : 'Off'}"}
     end
 
-    def swing_switch
+    def change_swing(para = true)
         @swing = !@swing
         return {success: true, message: "Swing is #{@swing ? 'On' : 'Off'}"}
     end 
