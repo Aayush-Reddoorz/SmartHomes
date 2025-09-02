@@ -30,8 +30,8 @@ ApplianceManagerInstance = ApplianceManager.instance #Create Base Class
 ApplianceManagerInstance.get_appliances #Load Data
 
 def save_products_to_txt
-    ApplianceManagerInstance = ApplianceManagerInstance.instance
-    products = ApplianceManagerInstance.products
+    applianceManagerInstance = ApplianceManagerInstance.instance
+    products = applianceManagerInstance.products
     products_array = products.map { |product| product.show_confurigations }
     File.open("/Store/Configuration.txt", "w") do |file|
         file.write(JSON.pretty_generate(products_array))
