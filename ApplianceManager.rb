@@ -12,6 +12,10 @@ class ApplianceManager
     def add_product(product)
         @products<<product
     end
+    
+    def remove_product(index)
+      @products.delete_at(index)
+    end
 
     def get_appliances
         saved_appliances = JSON.parse(File.read("./Store/Configuration.txt"))

@@ -1,13 +1,40 @@
 [
   {
     "@name": "Fan",
-    "@status": false,
-    "@speed": 5
+    "@status": true,
+    "@speed": 2
   },
   {
     "@name": "Fan",
     "@status": false,
     "@speed": 5
+  },
+  {
+    "@name": "Tv",
+    "@status": false,
+    "@volume": 5,
+    "@channel": 100
+  },
+  {
+    "@name": "Refrigrator",
+    "@status": true,
+    "@cool_intensity": 3,
+    "@freezing": false
+  },
+  {
+    "@name": "Tubelight",
+    "@status": false,
+    "@brightness": 2
+  },
+  {
+    "@name": "Fan",
+    "@status": false,
+    "@speed": 5
+  },
+  {
+    "@name": "Tubelight",
+    "@status": false,
+    "@brightness": 5
   },
   {
     "@name": "Air Conditioner",
@@ -19,9 +46,9 @@
     "@swing": false
   },
   {
-    "@name": "Tv",
+    "@name": "Refrigrator",
     "@status": false,
-    "@volume": 5,
-    "@channel": 100
+    "@cool_intensity": 3,
+    "@freezing": false
   }
 ]
