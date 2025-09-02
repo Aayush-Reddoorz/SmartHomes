@@ -3,9 +3,10 @@ require_relative 'Appliances'
 class Fan<Appliances
      
     attr_reader :speed
-    def initialize(speed)
-    super('Fan')
-      @speed=speed
+
+    def initialize
+      super('Fan')
+      @speed=5
     end
 
     def change_speed(speed)
@@ -15,3 +16,6 @@ class Fan<Appliances
        return {success:true, message: "The speed is set to #{@speed}."}
     end
 end
+
+current_fan = Fan.new
+current_fan.display_edit_confurigation
