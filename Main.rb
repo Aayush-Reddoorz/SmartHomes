@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
-
+require 'json'
+require_relative 'ApplianceManager.rb'
 
 # Method to print big ASCII header using figlet
 def print_header
@@ -25,9 +26,17 @@ def view_appliances
   end
 end
 
-
 ApplianceManagerInstance = ApplianceManager.instance #Create Base Class
 ApplianceManagerInstance.get_appliances #Load Data
+
+def save_products_to_txt
+    ApplianceManagerInstance = ApplianceManagerInstance.instance
+    products = ApplianceManagerInstance.products
+    products_array = products.map { |product| product.show_confurigations }
+    File.open("/Store/Configuration.txt", "w") do |file|
+        file.write(JSON.pretty_generate(products_array))
+    end
+end
 
 require_relative 'admin'
 require_relative 'user'
