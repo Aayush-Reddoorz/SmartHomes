@@ -27,8 +27,15 @@ def user_menu
     clear_screen
     puts "\nAll Appliances:"
     view_appliances
+    puts "Exit : To back to Home Window"
     puts "Choose appliance to change confurigations"
+    
     user_input = gets.chomp.to_i
+    
+    if(user_input == 0)
+      break
+    end
+
     ApplianceManagerInstance.products[user_input - 1].display_edit_confurigation 
   end
 
