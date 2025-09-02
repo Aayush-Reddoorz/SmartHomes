@@ -8,6 +8,10 @@ require_relative './Appliance/Refrigrator.rb'
 require_relative './Appliance/Tubelight.rb'
 require_relative './Appliance/AirConditioner.rb'
 
+
+def clear_screen
+    system("clear") || system("cls")
+end
 # Method to print big ASCII header using figlet
 def print_header
   header_text = 'SMART-HOMES'

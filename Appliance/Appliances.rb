@@ -25,8 +25,9 @@ class Appliances
     end
 
    def display_edit_confurigation
-  puts "\n===== Current Configuration ====="
-  variables_arr = instance_variables
+    clear_screen
+    puts "\n===== Current Configuration ====="
+    variables_arr = instance_variables
 
   # Pretty table header
   puts format("%-5s %-20s %-20s", "No.", "Variable", "Value")
@@ -46,11 +47,8 @@ class Appliances
 
   # Try to preserve integer if possible
   user_input_value = user_input_value.to_i.to_s == user_input_value ? user_input_value.to_i : user_input_value
-
   result = self.send("change_#{key}", user_input_value)
-
-  puts "\n===== Updated Configuration ====="
-  puts self.show_confurigations
+  save_products_to_txt
 end
 
 

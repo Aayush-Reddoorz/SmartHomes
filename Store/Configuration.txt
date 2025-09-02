@@ -2,7 +2,7 @@
   {
     "@name": "Fan",
     "@status": false,
-    "@speed": 5
+    "@speed": 3
   },
   {
     "@name": "Fan",
