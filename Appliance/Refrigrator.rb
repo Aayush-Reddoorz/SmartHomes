@@ -7,14 +7,14 @@ class Refrigrator < Appliances
         @freezing = freezing ? true : false
     end
 
-    def change_cool_intensity(instensity)
+    def change_cool_intensity(instensity=false)
         return {success: false,message: "Cool Intensity is too low !!"} if(intensity < 1)
         return {success: false,message: "Cool Intensity is too high !!"} if(intensity > 5)
         @cool_intensity = intensity
         return {success: true,message: "Cool Intensity is set to #{@cool_intensity}"}
     end
 
-    def change_freezing
+    def change_freezing(freezing=false)
         @freezing = !@freezing
         return {success: true,message: "Freezing is #{@freezing ? "On" : "Off"}"}
     end
