@@ -1,5 +1,6 @@
 class AirConditioner < Appliances
     @attr_reader :temprature,:timer,:speed,:cool_mode,:swing
+    
     def initialize
        super("Air Conditoner")
        @temprature = 25

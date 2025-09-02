@@ -1,5 +1,6 @@
+require_relative 'Appliances.rb'
 class Refrigrator < Appliances
-    @attr_reader :cool_intensity,:freezing
+    attr_reader :cool_intensity, :freezing
     def initialize
         super("Refrigrator")
         @cool_intensity = 3
@@ -18,3 +19,5 @@ class Refrigrator < Appliances
         return {success: true,message: "Freezing is #{@freezing ? "On" : "Off"}"}
     end
 end
+
+refri = Refrigrator.new

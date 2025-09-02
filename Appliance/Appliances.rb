@@ -1,5 +1,5 @@
 class Appliances
-    @attr_reader :name,:status
+    attr_reader :name,:status
     def initialize(name)
         @name = name
         @status = false
@@ -14,10 +14,13 @@ class Appliances
         @status = !@status
     end
     def show_confurigations
+
         appliance_confurugation = {}
+
         instance_variables.each do |variable|
             appliance_confurugation[variable] = instance_variable_get(variable)
         end
+        
         appliance_confurugation
     end
 end
