@@ -10,7 +10,7 @@
     "@speed": 5
   },
   {
-    "@name": "Air Conditoner",
+    "@name": "Air Conditioner",
     "@status": false,
     "@temprature": 25,
     "@timer": 0,

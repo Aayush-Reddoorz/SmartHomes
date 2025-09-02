@@ -28,7 +28,7 @@ class ApplianceManager
                 current_appliance=Tubelight.new(app_hash["@status"],app_hash["@brightness"])
             when "Refrigrator"
                  current_appliance= Refrigrator.new(app_hash["@status"],app_hash["@cool_intensity"],app_hash["@freezing"])
-            when "AirConditioner"
+            when "Air Conditioner"
                  current_appliance= AirConditioner.new(app_hash["@status"],app_hash["@temprature"],app_hash["@timer"], app_hash["@speed"], app_hash["@cool_mode"],app_hash["@swing"])                
             end
             @products << current_appliance
