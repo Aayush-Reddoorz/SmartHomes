@@ -1,5 +1,5 @@
 class Appliances
-    @attr_reader :name,:status
+    attr_reader :name,:status
     def initialize(name)
         @name = name
         @status = false
