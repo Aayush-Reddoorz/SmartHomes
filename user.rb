@@ -37,6 +37,7 @@ def user_menu
     end
     if(user_input > ApplianceManagerInstance.products.length)
       puts "Invalid Choice"
+      next
     end
     ApplianceManagerInstance.products[user_input - 1].display_edit_confurigation 
   end
