@@ -20,7 +20,7 @@ class Tv<Appliances
     def change_channel(channel)
         return {success: false, message: "#{@channel} Channel does not exist!!"} if channel<0
         return {success:false, message: "#{@channel} Channel does not exist!!"} if channel>100
-        @volume=volume
+        @channel=channel
         return {success: true, message: "The channel is set to #{@channel}."}
     end
 
