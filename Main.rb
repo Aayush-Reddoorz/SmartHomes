@@ -1,6 +1,12 @@
 #!/usr/bin/env ruby
 require 'json'
 require_relative 'ApplianceManager.rb'
+require_relative './Appliance/Appliances.rb'
+require_relative './Appliance/Fan.rb'
+require_relative './Appliance/Tv.rb'
+require_relative './Appliance/Refrigrator.rb'
+require_relative './Appliance/Tubelight.rb'
+require_relative './Appliance/AirConditioner.rb'
 
 # Method to print big ASCII header using figlet
 def print_header
@@ -30,10 +36,10 @@ ApplianceManagerInstance = ApplianceManager.instance #Create Base Class
 ApplianceManagerInstance.get_appliances #Load Data
 
 def save_products_to_txt
-    ApplianceManagerInstance = ApplianceManagerInstance.instance
-    products = ApplianceManagerInstance.products
+    applianceManagerInstance = ApplianceManager.instance
+    products = applianceManagerInstance.products
     products_array = products.map { |product| product.show_confurigations }
-    File.open("/Store/Configuration.txt", "w") do |file|
+    File.open("./Store/Configuration.txt", "w") do |file|
         file.write(JSON.pretty_generate(products_array))
     end
 end
@@ -41,6 +47,7 @@ end
 require_relative 'admin'
 require_relative 'user'
 
+puts ApplianceManagerInstance.products
 
 # Main loop
 loop do

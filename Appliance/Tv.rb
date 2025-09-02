@@ -3,9 +3,11 @@ require_relative 'Appliances'
 class Tv<Appliances
      
     attr_reader :volume, :channel
-    def initialize
-        @volume=5
-        @channel=100
+
+    def initialize(status = false,volume = 5,channel = 100)
+        super("Tv")
+        @volume = volume
+        @channel = channel = 100
     end
 
     def change_volume(volume)

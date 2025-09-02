@@ -1,14 +1,20 @@
+require 'singleton'
+
 class ApplianceManager
     
-    include Singelton
+    include Singleton
+
     attr_reader :products
     def initialize()
         @products = []
     end
     
+    def add_product(product)
+        @products<<product
+    end
+
     def get_appliances
-        saved_appliances = JSON.parse(File.read("/Store/Configuration.txt"))
-        
+        saved_appliances = JSON.parse(File.read("./Store/Configuration.txt"))
         saved_appliances.each do |app_hash|
             name_of_appliance = app_hash["@name"]
             current_appliance = {}
