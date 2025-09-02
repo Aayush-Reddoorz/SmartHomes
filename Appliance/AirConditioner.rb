@@ -2,7 +2,7 @@ class AirConditioner < Appliances
     attr_reader :temprature,:timer,:speed,:cool_mode,:swing
     
     def initialize(status = false,temprature = 25,timer = 0,speed = 0,cool_mode = false,swing = false)
-       super("Air Conditoner")
+       super("Air Conditioner")
        @temprature = temprature
        @timer = timer
        @speed = speed
