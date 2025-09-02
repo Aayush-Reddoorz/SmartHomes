@@ -25,6 +25,10 @@ def view_appliances
   end
 end
 
+
+ApplianceManagerInstance = ApplianceManager.instance #Create Base Class
+ApplianceManagerInstance.get_appliances #Load Data
+
 require_relative 'admin'
 require_relative 'user'
 
