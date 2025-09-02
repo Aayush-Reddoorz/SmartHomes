@@ -1,10 +1,10 @@
-require_relative 'Appliances'
+require_relative 'Appliances' 
 
 class Fan<Appliances
      
     attr_reader :speed
     def initialize(speed)
-        super('Fan')
+    super('Fan')
       @speed=speed
     end
 
