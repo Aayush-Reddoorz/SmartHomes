@@ -1,3 +1,6 @@
+
+Feature Branch is the Main Branch
+
 SMART HOME MANAGEMENT IN RUBY
 # 🏠 SmartHome Management (Ruby OOP Project)
 

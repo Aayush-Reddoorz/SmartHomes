@@ -12,7 +12,7 @@
   {
     "@name": "Tv",
     "@status": false,
-    "@volume": 5,
+    "@volume": 67,
     "@channel": 100
   },
   {
@@ -25,11 +25,6 @@
     "@name": "Tubelight",
     "@status": false,
     "@brightness": 2
-  },
-  {
-    "@name": "Fan",
-    "@status": false,
-    "@speed": 2
   },
   {
     "@name": "Tubelight",
@@ -55,5 +50,17 @@
     "@name": "Fan",
     "@status": false,
     "@speed": 5
+  },
+  {
+    "@name": "Refrigrator",
+    "@status": true,
+    "@cool_intensity": 3,
+    "@freezing": false
+  },
+  {
+    "@name": "Refrigrator",
+    "@status": false,
+    "@cool_intensity": 3,
+    "@freezing": false
   }
 ]
