@@ -1,6 +1,9 @@
 #!/usr/bin/env ruby
 require 'json'
-require_relative 'ApplianceManager.rb'
+require_relative 'ApplianceManager'
+
+require_relative 'admin'
+require_relative 'user'
 
 # Method to print big ASCII header using figlet
 def print_header
@@ -37,9 +40,6 @@ def save_products_to_txt
         file.write(JSON.pretty_generate(products_array))
     end
 end
-
-require_relative 'admin'
-require_relative 'user'
 
 
 # Main loop
