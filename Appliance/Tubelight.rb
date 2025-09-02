@@ -3,8 +3,10 @@ require_relative 'Appliances'
 class Tubelight< Appliances
 
     attr_reader :brightness
-    def initialize
-        @brightness=5
+
+    def initialize(status = false,brightness=5)
+        super("Tubelight")
+        @brightness=brightness
     end
 
     def change_brightness(brightness)

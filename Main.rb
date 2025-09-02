@@ -1,10 +1,24 @@
 #!/usr/bin/env ruby
 require 'json'
+<<<<<<< HEAD
 require_relative 'ApplianceManager'
 
 require_relative 'admin'
 require_relative 'user'
+=======
+require_relative 'ApplianceManager.rb'
+require_relative './Appliance/Appliances.rb'
+require_relative './Appliance/Fan.rb'
+require_relative './Appliance/Tv.rb'
+require_relative './Appliance/Refrigrator.rb'
+require_relative './Appliance/Tubelight.rb'
+require_relative './Appliance/AirConditioner.rb'
+>>>>>>> 3722002cab5920273e14087dd98e8006d0cea638
 
+
+def clear_screen
+    system("clear") || system("cls")
+end
 # Method to print big ASCII header using figlet
 def print_header
   header_text = 'SMART-HOMES'
@@ -33,14 +47,21 @@ ApplianceManagerInstance = ApplianceManager.instance #Create Base Class
 ApplianceManagerInstance.get_appliances #Load Data
 
 def save_products_to_txt
-    applianceManagerInstance = ApplianceManagerInstance.instance
+    applianceManagerInstance = ApplianceManager.instance
     products = applianceManagerInstance.products
     products_array = products.map { |product| product.show_confurigations }
-    File.open("/Store/Configuration.txt", "w") do |file|
+    File.open("./Store/Configuration.txt", "w") do |file|
         file.write(JSON.pretty_generate(products_array))
     end
 end
 
+<<<<<<< HEAD
+=======
+require_relative 'admin'
+require_relative 'user'
+
+# puts ApplianceManagerInstance.products
+>>>>>>> 3722002cab5920273e14087dd98e8006d0cea638
 
 # Main loop
 loop do

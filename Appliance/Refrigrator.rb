@@ -1,10 +1,10 @@
 require_relative 'Appliances.rb'
 class Refrigrator < Appliances
-    attr_reader :cool_intensity,:freezing
-    def initialize
+    attr_reader :cool_intensity, :freezing
+    def initialize(status=false,cool_intensity = 3,freezing)
         super("Refrigrator")
-        @cool_intensity = 3
-        @freezing = false
+        @cool_intensity = cool_intensity
+        @freezing = freezing ? true : false
     end
 
     def change_cool_intensity(instensity)
@@ -20,4 +20,3 @@ class Refrigrator < Appliances
     end
 end
 
-refri = Refrigrator.new

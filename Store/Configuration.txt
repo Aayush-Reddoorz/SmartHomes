@@ -1,0 +1,27 @@
+[
+  {
+    "@name": "Fan",
+    "@status": false,
+    "@speed": 3
+  },
+  {
+    "@name": "Fan",
+    "@status": false,
+    "@speed": 5
+  },
+  {
+    "@name": "Air Conditioner",
+    "@status": false,
+    "@temprature": 25,
+    "@timer": 0,
+    "@speed": 0,
+    "@cool_mode": false,
+    "@swing": false
+  },
+  {
+    "@name": "Tv",
+    "@status": false,
+    "@volume": 5,
+    "@channel": 100
+  }
+]

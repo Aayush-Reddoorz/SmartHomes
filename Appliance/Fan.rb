@@ -4,9 +4,9 @@ class Fan<Appliances
      
     attr_reader :speed
 
-    def initialize
+    def initialize(status = false,speed = 5)
       super('Fan')
-      @speed=5
+      @speed=speed
     end
 
     def change_speed(speed)
@@ -17,5 +17,3 @@ class Fan<Appliances
     end
 end
 
-current_fan = Fan.new
-current_fan.display_edit_confurigation
