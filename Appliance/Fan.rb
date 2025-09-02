@@ -1,14 +1,17 @@
-require_relative 'Appliances'
+require_relative 'Appliances' 
 
 class Fan<Appliances
      
-    @speed=0
+    attr_reader :speed
     def initialize(speed)
-        super('Fan')
+    super('Fan')
       @speed=speed
     end
 
-    def change_speed(level)
-       return {}
+    def change_speed(speed)
+       return {success: false, message: "#{@speed} speed is too low!!"} if speed<0
+       return {success:false, message: "#{@speed} speed is too high!!"} if speed>5
+       @speed=speed
+       return {success:true, message: "The speed is set to #{@speed}."}
     end
 end
