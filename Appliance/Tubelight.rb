@@ -1,6 +1,6 @@
 require_relative 'Appliances'
 
-class Tubelight
+class Tubelight< Appliances
 
     attr_reader :brightness
     def initialize(brightness)
@@ -8,8 +8,8 @@ class Tubelight
     end
 
     def change_brightness(brightness)
-        return {sucees: false, message: "The brightness is too low!!"}
-        return {success: false,message: "THe brightness is too high!!"}
+        return {sucees: false, message: "The brightness is too low!!"} if brightness<0
+        return {success: false,message: "THe brightness is too high!!"} if brightness>5
         @brightness=brightness
         return {success:true, message: "The brightness is set to #{@brightness}."}
     end
