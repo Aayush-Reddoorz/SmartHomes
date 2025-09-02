@@ -9,6 +9,9 @@ class Fan<Appliances
     end
 
     def change_speed(level)
-       return {}
+       return {success: false, message: "The fan is at its minimum speed!!"} if speed<0
+       return {success:false, message: "The fan is at its maximum speed!!"} if speed>5
+       @speed=speed
+       return {success:true, message: "The speed is set to #{@speed}"}
     end
 end
