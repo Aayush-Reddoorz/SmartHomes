@@ -19,7 +19,7 @@
     "@name": "Refrigrator",
     "@status": false,
     "@cool_intensity": 3,
-    "@freezing": false
+    "@freezing": true
   },
   {
     "@name": "Tubelight",

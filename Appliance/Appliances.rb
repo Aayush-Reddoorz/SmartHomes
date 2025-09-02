@@ -49,7 +49,7 @@ class Appliances
 
   key = variables_arr[user_input].to_s[1..]  # remove '@'
 
-  if(key != "status")
+  unless( key == "status" || key == "cool_mode" || key == "swing" || key == "freezing")
       puts "Enter new value for '#{key}':"
       user_input_value = gets.chomp
   end
